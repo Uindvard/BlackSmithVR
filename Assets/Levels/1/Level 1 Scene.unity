@@ -1337,9 +1337,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18ffa6ae5c9a06442a6652b30ddd9b9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ignoreLayer:
-    m_Bits: 0
-  characterController: {fileID: 0}
 --- !u!1 &216874021
 GameObject:
   m_ObjectHideFlags: 0
@@ -2186,7 +2183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb2ae40e17d4b29489525c3b93edefb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chestUI: {fileID: 0}
+  uiPanel: {fileID: 0}
 --- !u!1 &499233278
 GameObject:
   m_ObjectHideFlags: 0
@@ -2850,6 +2847,29 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e5b1b32524ef894395a7560895203f0, type: 3}
+--- !u!1 &811476545 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 238169883339243610, guid: 1c142dded369dfc4f86b6c540cb6e405,
+    type: 3}
+  m_PrefabInstance: {fileID: 1372606690}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &811476550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 811476545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ea810d9276eae84fbaada61604dd0b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 2465560644638849341, guid: 6a9a8dd4092331d448384b4050e0d6c5, type: 3}
+  hitRadius: 0.1
+  maxQuality: 100
+  hitPointPrefab: {fileID: 0}
+  maxHitPoints: 5
 --- !u!1 &826932608
 GameObject:
   m_ObjectHideFlags: 0
@@ -3790,6 +3810,10 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 238169883339243610, guid: 1c142dded369dfc4f86b6c540cb6e405,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 811476550}
     - targetCorrespondingSourceObject: {fileID: 7277612013150558880, guid: 1c142dded369dfc4f86b6c540cb6e405,
         type: 3}
       insertIndex: -1
@@ -4330,9 +4354,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18ffa6ae5c9a06442a6652b30ddd9b9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ignoreLayer:
-    m_Bits: 0
-  characterController: {fileID: 0}
 --- !u!1 &1597110936
 GameObject:
   m_ObjectHideFlags: 0

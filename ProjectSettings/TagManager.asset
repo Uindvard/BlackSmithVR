@@ -8,6 +8,7 @@ TagManager:
   - Metal
   - Not Ready Weapon
   - Controller
+  - HitPoint
   layers:
   - Default
   - TransparentFX
