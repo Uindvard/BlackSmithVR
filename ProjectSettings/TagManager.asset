@@ -8,6 +8,8 @@ TagManager:
   - Metal
   - Not Ready Weapon
   - Controller
+  - Heated
+  - Fuel
   layers:
   - Default
   - TransparentFX
