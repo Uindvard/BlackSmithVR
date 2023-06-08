@@ -3,15 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ChestInteraction : MonoBehaviour
+public class Chest: MonoBehaviour
 {
     public GameObject uiPanel;
 
-    private void OnTriggerEnter(Collider other)
+    public void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Controller"))
         {
             uiPanel.SetActive(true);
         }
     }
+    public void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Controller"))
+        {
+            uiPanel.SetActive(false);
+        }
+    }
 }
+
+
