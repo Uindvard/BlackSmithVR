@@ -4,51 +4,42 @@ using UnityEngine;
 
 public class OvenProJob: MonoBehaviour
 {
-    public float minTemperature = 0f;
-    public float maxTemperature = 2000f;
-    public float temperatureIncreaseRate = 10f;
-    public Transform normalMetalPrefab;
-    public Transform heatedMetalPrefab;
-    public Transform temperatureIndicator; // ссылка на объект, представляющий индикатор температуры
+    public float heatingDelay = 8f;
+    public GameObject heatedMetalPrefab;
 
-    private float currentTemperature = 0f;
-    private bool isHeated = false;
+    private bool isHeating = false;
+    private float currentHeatingTime = 0f;
+    private GameObject currentMetalObject;
 
     private void Update()
     {
-        // Увеличиваем температуру с заданной скоростью
-        currentTemperature += temperatureIncreaseRate * Time.deltaTime;
-        currentTemperature = Mathf.Clamp(currentTemperature, minTemperature, maxTemperature);
-
-        // Обновляем индикатор температуры в UI
-        UpdateTemperatureIndicator();
-
-        // Проверяем, достигла ли температура порогового значения
-        if (currentTemperature >= 1500f && !isHeated)
+        if (isHeating)
         {
-            Debug.Log("Вася уже 1500 вырубай");
-            HeatMetal();
+            currentHeatingTime += Time.deltaTime;
+            if (currentHeatingTime >= heatingDelay)
+            {
+                HeatMetal();
+                isHeating = false; // Остановка нагревания после создания нагретого слитка
+            }
         }
     }
 
-    private void UpdateTemperatureIndicator()
+    private void OnTriggerEnter(Collider other)
     {
-        // Обновляем значение индикатора температуры в UI
-        if (temperatureIndicator != null)
+        if (other.CompareTag("Metal") && !isHeating)
         {
-            // Пример: предположим, что у индикатора есть компонент Image и Text для отображения значения температуры
-            // Обновляем значение Image или Text в соответствии с текущей температурой
+            isHeating = true;
+            currentHeatingTime = 0f;
+            currentMetalObject = other.gameObject; // Сохраняем ссылку на текущий обычный слиток
         }
     }
 
     private void HeatMetal()
     {
-        // Заменяем префаб обычного металла на нагретый металл
-        if (normalMetalPrefab != null && heatedMetalPrefab != null)
+        if (currentMetalObject != null && heatedMetalPrefab != null)
         {
-            Instantiate(heatedMetalPrefab, transform.position, transform.rotation);
-            Destroy(normalMetalPrefab.gameObject);
-            isHeated = true;
+            GameObject heatedMetal = Instantiate(heatedMetalPrefab, currentMetalObject.transform.position, currentMetalObject.transform.rotation);
+            Destroy(currentMetalObject); // Удаление обычного слитка
         }
     }
 }

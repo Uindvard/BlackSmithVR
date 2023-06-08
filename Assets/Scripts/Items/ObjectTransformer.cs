@@ -4,32 +4,29 @@ using UnityEngine;
 
 public class ObjectTransformer: MonoBehaviour
 {
-    public GameObject swordPrefab; // Ссылка на префаб меча
-    public int hitThreshold = 4; // Пороговое значение для количества ударов
+    public GameObject bladePrefab; 
+    public int hitThreshold = 4; 
 
-    private int hitCount = 0; // Счетчик ударов
+    private int hitCount = 0; 
 
     private void OnCollisionEnter(Collision collision)
     {
-        // Проверяем, если столкновение произошло с молотом
         if (collision.gameObject.CompareTag("Hammer"))
         {
-            hitCount++; // Увеличиваем счетчик ударов
+            hitCount++; 
 
-            // Проверяем, достигнуто ли пороговое значение ударов
+            
             if (hitCount >= hitThreshold)
             {
-                TransformIntoSword(); // Преобразуем объект в меч
+                TransformIntoSword(); 
             }
         }
     }
 
     private void TransformIntoSword()
     {
-        // Уничтожаем текущий объект
         Destroy(gameObject);
 
-        // Создаем экземпляр меча из префаба и размещаем его на том же месте
-        Instantiate(swordPrefab, transform.position, transform.rotation);
+        Instantiate(bladePrefab, transform.position, transform.rotation);
     }
 }
