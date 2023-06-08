@@ -11,7 +11,7 @@ public class GrindStoneJob: MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
 
-        if (collision.gameObject.CompareTag("Not Ready Weapon"))
+        if (collision.gameObject.CompareTag(""))
         {
             DestroyMetalAfterDelay(collision.gameObject);
         }
