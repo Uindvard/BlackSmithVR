@@ -2184,6 +2184,12 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!1 &1960335400 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6028197443857764982, guid: 79ce7fe88e23c4949b9864ea1cec4aab,
+    type: 3}
+  m_PrefabInstance: {fileID: 2516097469061680366}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2516097469061680366
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2247,6 +2253,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5690658394565630032, guid: 79ce7fe88e23c4949b9864ea1cec4aab,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6028197443857764982, guid: 79ce7fe88e23c4949b9864ea1cec4aab,
         type: 3}
       propertyPath: m_IsActive
@@ -2262,6 +2273,11 @@ PrefabInstance:
       propertyPath: chestUI
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 8383201134193449379, guid: 79ce7fe88e23c4949b9864ea1cec4aab,
+        type: 3}
+      propertyPath: uiPanel
+      value: 
+      objectReference: {fileID: 1960335400}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
