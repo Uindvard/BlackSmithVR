@@ -112,13 +112,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1571332088119357706}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.58831, y: 2.06772, z: 2.93129}
+  m_LocalPosition: {x: 2.309094, y: 2.202201, z: 2.0252748}
   m_LocalScale: {x: 0.2871024, y: 0.0068050744, z: 0.027881373}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5652748831365308497}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3806488640509368836
 MeshFilter:
@@ -309,7 +309,7 @@ MonoBehaviour:
       m_Calls: []
   m_AttachTransform: {fileID: 0}
   m_SecondaryAttachTransform: {fileID: 0}
-  m_UseDynamicAttach: 0
+  m_UseDynamicAttach: 1
   m_MatchAttachPosition: 1
   m_MatchAttachRotation: 1
   m_SnapToColliderVolume: 1

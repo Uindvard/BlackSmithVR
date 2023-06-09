@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 3806488640509368836}
   - component: {fileID: 1083571390323256875}
   - component: {fileID: 5513668994705767752}
-  - component: {fileID: -1750535727639010175}
   - component: {fileID: 1708963513982159528}
   - component: {fileID: 3655316899731035601}
+  - component: {fileID: 5249116760946419109}
   m_Layer: 6
   m_Name: Blade(Almost finished billet hot)
   m_TagString: Non sharpened weapon
@@ -30,12 +30,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1571332088119357706}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.49519, y: 2.08776, z: 2.94079}
+  m_LocalPosition: {x: 2.3284752, y: 2.202201, z: 2.2097414}
   m_LocalScale: {x: 0.37688074, y: 0.04688788, z: 0.08025032}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3806488640509368836
 MeshFilter:
@@ -108,6 +108,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+<<<<<<< Updated upstream
 --- !u!114 &-1750535727639010175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,6 +124,8 @@ MonoBehaviour:
   bladePrefab: {fileID: 1571332088119357706, guid: a8ea382c8025734478fe455fe2ba0245,
     type: 3}
   hitThreshold: 6
+=======
+>>>>>>> Stashed changes
 --- !u!54 &1708963513982159528
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -241,7 +244,7 @@ MonoBehaviour:
       m_Calls: []
   m_AttachTransform: {fileID: 0}
   m_SecondaryAttachTransform: {fileID: 0}
-  m_UseDynamicAttach: 0
+  m_UseDynamicAttach: 1
   m_MatchAttachPosition: 1
   m_MatchAttachRotation: 1
   m_SnapToColliderVolume: 1
@@ -285,3 +288,19 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
+--- !u!114 &5249116760946419109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1571332088119357706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52195bf48e187e14b9e7bc0ce92e6d90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  strikeForce: 10
+  forgeLayer:
+    serializedVersion: 2
+    m_Bits: 0

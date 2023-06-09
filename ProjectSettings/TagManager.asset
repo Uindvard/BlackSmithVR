@@ -11,6 +11,8 @@ TagManager:
   - Fuel
   - Non sharpened weapon
   - Ready not grind
+  - Not Ready Weapon
+  - Anvil
   layers:
   - Default
   - TransparentFX
@@ -19,7 +21,7 @@ TagManager:
   - Water
   - UI
   - Item
-  - 
+  - Metal
   - 
   - 
   - 

@@ -7,9 +7,16 @@ public class VRMovement : MonoBehaviour
 
     private Vector2 inputAxis; 
 
+<<<<<<< Updated upstream
     public float movementSpeed = 3f;
     public float rotationSpeed = 90f; 
 
+=======
+    public float movementSpeed = 3f; 
+
+    public float rotationSpeed = 90f; 
+
+>>>>>>> Stashed changes
     private CharacterController characterController; 
 
     void Start()
@@ -27,7 +34,10 @@ public class VRMovement : MonoBehaviour
 
         characterController.Move(movement);
 
+<<<<<<< Updated upstream
        
+=======
+>>>>>>> Stashed changes
         transform.Rotate(Vector3.up, inputAxis.x * rotationSpeed * Time.deltaTime);
     }
 }
