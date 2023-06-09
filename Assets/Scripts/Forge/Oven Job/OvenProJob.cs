@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class OvenProJob: MonoBehaviour
 {
+
+    [Header("РџРѕСЂРѕРіРѕРІРѕРµ Р·РЅР°С‡РµРЅРёРµ")]
     public float heatingDelay = 8f;
+    [Header("РЎСЃС‹Р»РєР° РЅР° РїСЂРµС„Р°Р± СЂР°СЃРєР°Р»РµРЅРЅРѕРіРѕ РјРµС‚Р°Р»Р°")]
     public GameObject heatedMetalPrefab;
 
     private bool isHeating = false;
@@ -19,7 +22,7 @@ public class OvenProJob: MonoBehaviour
             if (currentHeatingTime >= heatingDelay)
             {
                 HeatMetal();
-                isHeating = false; // Остановка нагревания после создания нагретого слитка
+                isHeating = false; 
             }
         }
     }
@@ -30,7 +33,7 @@ public class OvenProJob: MonoBehaviour
         {
             isHeating = true;
             currentHeatingTime = 0f;
-            currentMetalObject = other.gameObject; // Сохраняем ссылку на текущий обычный слиток
+            currentMetalObject = other.gameObject; 
         }
     }
 
@@ -39,7 +42,7 @@ public class OvenProJob: MonoBehaviour
         if (currentMetalObject != null && heatedMetalPrefab != null)
         {
             GameObject heatedMetal = Instantiate(heatedMetalPrefab, currentMetalObject.transform.position, currentMetalObject.transform.rotation);
-            Destroy(currentMetalObject); // Удаление обычного слитка
+            Destroy(currentMetalObject);
         }
     }
 }

@@ -3,14 +3,14 @@ using UnityEngine.XR;
 
 public class VRMovement : MonoBehaviour
 {
-    public XRNode inputSource; // Выберите контроллер (левый или правый)
+    public XRNode inputSource; 
 
-    private Vector2 inputAxis; // Движение по осям X и Z
+    private Vector2 inputAxis; 
 
-    public float movementSpeed = 3f; // Скорость передвижения
-    public float rotationSpeed = 90f; // Скорость поворота
+    public float movementSpeed = 3f;
+    public float rotationSpeed = 90f; 
 
-    private CharacterController characterController; // Компонент CharacterController
+    private CharacterController characterController; 
 
     void Start()
     {
@@ -27,7 +27,7 @@ public class VRMovement : MonoBehaviour
 
         characterController.Move(movement);
 
-        // Поворот
+       
         transform.Rotate(Vector3.up, inputAxis.x * rotationSpeed * Time.deltaTime);
     }
 }

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1349409399846854055}
   - component: {fileID: 8972511578170257387}
   - component: {fileID: 7316456164532501862}
-  - component: {fileID: 1313841877079813812}
+  - component: {fileID: 2210746977422734989}
   m_Layer: 6
   m_Name: Iron Ignot(Heated)
   m_TagString: Heated
@@ -270,7 +270,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.02, y: 0.019999996, z: 0.019999996}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1313841877079813812
+--- !u!114 &2210746977422734989
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -279,9 +279,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1059554631577528962}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 251a34c516b7834449caeabf3da8b3d1, type: 3}
+  m_Script: {fileID: 11500000, guid: 0846d0f084616ce46b0880be39bc796a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   bladePrefab: {fileID: 1571332088119357706, guid: 4a07b7ffc7521fd45bca8ea60b718f2b,
     type: 3}
-  hitThreshold: 8
+  hitThreshold: 5

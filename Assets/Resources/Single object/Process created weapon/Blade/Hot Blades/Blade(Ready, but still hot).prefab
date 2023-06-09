@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 6294696411772724232}
   - component: {fileID: 2010950779628376776}
   - component: {fileID: -3971703585322418044}
+  - component: {fileID: 1546857303305356813}
   m_Layer: 6
   m_Name: Blade(Ready, but still hot)
   m_TagString: Non sharpened weapon
@@ -117,12 +118,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1571332088119357706}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 251a34c516b7834449caeabf3da8b3d1, type: 3}
+  m_Script: {fileID: 11500000, guid: 0846d0f084616ce46b0880be39bc796a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   bladePrefab: {fileID: 1571332088119357706, guid: 5615d833838d3d2438b65db6adf55620,
     type: 3}
-  hitThreshold: 16
+  hitThreshold: 8
 --- !u!54 &2010950779628376776
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -285,3 +286,18 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
+--- !u!114 &1546857303305356813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1571332088119357706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0846d0f084616ce46b0880be39bc796a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bladePrefab: {fileID: 1571332088119357706, guid: 5615d833838d3d2438b65db6adf55620,
+    type: 3}
+  hitThreshold: 8
