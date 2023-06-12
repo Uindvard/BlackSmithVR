@@ -4,10 +4,8 @@ using UnityEngine;
 
 public class WeaponCooling: MonoBehaviour
 {
-    [Header("Сколько будет охлождаться")]
     public float heatingDelay = 5f;
 
-    [Header("Ссылка на охлождений префаб")]
     public GameObject heatedWeaponPrefab;
 
     private bool isHeating = false;
